@@ -1,18 +1,89 @@
-# React + Vite
+🎮 PlayStation Store — React + MUI
+Tienda virtual de videojuegos desarrollada con React y Material UI, que simula una experiencia de compra estilo PlayStation Store con carrito de compras, favoritos y autenticación de usuarios.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+📋 Descripción
+Aplicación web de comercio electrónico temática de videojuegos construida como proyecto académico. Permite explorar un catálogo de juegos, agregarlos al carrito o a favoritos, y gestionar la sesión del usuario. El proyecto fue desplegado en GitHub Pages.
 
-Currently, two official plugins are available:
+✨ Características Principales
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Catálogo de productos con imágenes, descripción y precio
+Carrito de compras con drawer lateral
+Sistema de favoritos
+Autenticación de usuarios (Login)
+Navegación entre secciones (Ofertas, Artículos)
+Diseño responsive con Material UI
+Desplegado en GitHub Pages
 
-## React Compiler
 
-The React Compiler is enabled on this template. See [this documentation](https://react.dev/learn/react-compiler) for more information.
+🖥️ Interfaz Gráfica
+La interfaz está construida con Material UI (MUI) e incluye:
 
-Note: This will impact Vite dev & build performances.
+Header con navegación, acceso a favoritos y carrito
+Cards de productos con imagen, nombre, descripción y precio
+CarritoDrawer — panel lateral deslizante para gestionar compras
+Footer con información del sitio
+Página de Login para autenticación
+Paleta de colores inspirada en la identidad visual de PlayStation (azul #0070D1)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🗂️ Arquitectura del Proyecto
+src/
+├── features/
+│   ├── articles/
+│   │   ├── componentes/
+│   │   │   ├── Articles.jsx
+│   │   │   └── Offers.jsx
+│   │   └── hooks/
+│   │       └── UseState.jsx
+│   ├── auth/
+│   │   ├── components/
+│   │   └── hooks/
+│   │       └── pages/
+│   │           └── Login.jsx
+│   └── layout/
+│       ├── components/
+│       │   ├── CarritoDrawer.jsx
+│       │   ├── Content.jsx
+│       │   ├── Footer.jsx
+│       │   └── Header.jsx
+│       └── hooks/
+│           ├── useCarrito.js
+│           ├── useFavoritos.js
+│           └── useLogin.js
+├── App.jsx
+└── main.jsx
+La arquitectura sigue el patrón Feature-Based, separando la lógica por funcionalidades. Cada feature contiene sus propios componentes y hooks personalizados para mantener el código modular y escalable.
+
+🪝 Hooks Personalizados
+HookDescripciónuseCarrito.jsGestiona el estado del carrito: agregar, eliminar y calcular totaluseFavoritos.jsControla la lista de productos marcados como favoritosuseLogin.jsManeja la autenticación y el estado de sesión del usuarioUseState.jsxHook de estado para el módulo de artículos
+
+🛠️ Tecnologías Utilizadas
+
+React — Biblioteca principal de UI
+Material UI (MUI) — Componentes de diseño
+Vite — Bundler y entorno de desarrollo
+gh-pages — Despliegue en GitHub Pages
+
+
+🚀 Instalación y Uso
+bash# Clonar el repositorio
+git clone https://github.com/gianfrancopiedrahita15-pixel/taller_3_react_mui.git
+
+# Instalar dependencias
+npm install
+
+# Iniciar en modo desarrollo
+npm run dev
+
+# Construir para producción
+npm run build
+
+# Desplegar en GitHub Pages
+npm run deploy
+
+👤 Autor
+Gianfranco Piedrahita
+
+GitHub: @gianfrancopiedrahita15-pixel
+Proyecto académico desarrollado como taller de React con Material UI
+Institución: Pixel / Curso de Desarrollo Frontend
